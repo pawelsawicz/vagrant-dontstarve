@@ -41,6 +41,8 @@ If you generated those two certificates, now you have to export them to your dis
 
   3. Go back to Personal Certificates->Select My Azure Management Certificate->Export-> Then Select "No, do not export the private key" -> Select DER encoded binary X.509 (.CER) -> Type file name and select location of your certificate
 
+3. Go to azure developer portal and select -> Settings-> Managment Certifcate -> Upload certificate -> select file from point 2.3 
+
 ##Other Info
 ###Routmap
 
