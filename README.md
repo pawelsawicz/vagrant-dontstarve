@@ -25,9 +25,9 @@ This is basic vagrant file with shell provisioning that allows everyone quickly 
 
 We will use ```makecert.exe``` distributed as part of the in the Windows 7 SDK. The following commands will create the required certificates and insert them into the current user’s personal store.
 
-*```makecert.exe -r -pe -a sha1 -n "CN=My Azure Management Certificate" -ss My -sr CurrentUser -len 2048 -sky exchange -sp "Microsoft Enhanced RSA and AES Cryptographic Provider" -sy 24```
+* ```makecert.exe -r -pe -a sha1 -n "CN=My Azure Management Certificate" -ss My -sr CurrentUser -len 2048 -sky exchange -sp "Microsoft Enhanced RSA and AES Cryptographic Provider" -sy 24```
 
-*```makecert.exe -r -pe -a sha1 -n "CN=My Azure SSL Certificate" -ss My -sr CurrentUser -len 2048 -sky exchange -sp "Microsoft Enhanced RSA and AES Cryptographic Provider" -sy 24```
+* ```makecert.exe -r -pe -a sha1 -n "CN=My Azure SSL Certificate" -ss My -sr CurrentUser -len 2048 -sky exchange -sp "Microsoft Enhanced RSA and AES Cryptographic Provider" -sy 24```
 
 If you generated those two certificates, now you have to export them to your disk and import into Azure Portal.
 
@@ -35,12 +35,13 @@ If you generated those two certificates, now you have to export them to your dis
 
 2. If you have certmgr opened, navigate into Personal->Certificates->My Azure Management Certificate and right click All Task->Export
 
-2.1 Then Select "Yes, export the private key" -> Select Personal Information Exchange (.PFX), Uncheck "Include all certification path if possible" -> Select Password, and type password -> Type file name and select location of your certificate
+  1. Then Select "Yes, export the private key" -> Select Personal Information Exchange (.PFX), Uncheck "Include all certification path if possible" -> Select Password, and type password -> Type file name and select location of your certificate
 
-2.2 Open command line navigate to the folder where you saved your .pfx file and run following command ```openssl pkcs12 -in vagrant.pfx -out c.pem -nodes``` [source](https://github.com/MSOpenTech/vagrant-azure/issues/25#issue-38745468) you can change name vagrant.pfx into something that fits you.
+  2. Open command line navigate to the folder where you saved your .pfx file and run following command ```openssl pkcs12 -in vagrant.pfx -out c.pem -nodes``` [source](https://github.com/MSOpenTech/vagrant-azure/issues/25#issue-38745468) you can change name vagrant.pfx into something that fits you.
 
-2.3 Go back to Personal Certificates->Select My Azure Management Certificate->Export-> Then Select "No, do not export the private key" -> Select DER encoded binary X.509 (.CER) -> Type file name and select location of your certificate
+  3. Go back to Personal Certificates->Select My Azure Management Certificate->Export-> Then Select "No, do not export the private key" -> Select DER encoded binary X.509 (.CER) -> Type file name and select location of your certificate
 
+##Other Info
 ###Routmap
 
 1. Add VirtualBox provider
