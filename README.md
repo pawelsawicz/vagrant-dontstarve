@@ -16,8 +16,8 @@ This is basic vagrant file with shell provisioning that allows everyone quickly 
 1. Simply ```git clone git@github.com:pawelsawicz/vagrant-dontstarve.git``` or [download a zip](https://github.com/pawelsawicz/vagrant-dontstarve/archive/master.zip)
 2. Copy your server_token.txt file into ```./configs```  in your vagrant-dontstarve folder http://dont-starve-game.wikia.com/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers#Server_Tokens
 3. Customize ```./configs/settings.ini``` file (optional)
-4. Open Vagrantfile and change fallowing paramaters. For certification see this section
-5. Once you provide all required filed simply ```vagrant up```
+4. Open Vagrantfile and change all paramaters where is "(To Fill out)" phrase. For certification see this [section](https://github.com/pawelsawicz/vagrant-dontstarve#certification-how-to-generate-)
+5. Once you provide all required filed simply ```vagrant up``` 
 6. Enjoy!
 
 ### Certification, how to generate ?
