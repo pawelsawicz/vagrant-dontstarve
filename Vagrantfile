@@ -1,7 +1,10 @@
 Vagrant.configure('2') do |config|
     config.vm.box = 'azure'
+
     config.vm.provider :azure do |azure, override|
         override.vm.synced_folder ".", "/vagrant", disabled: true
+        override.ssh.username = 'VM User (To Fill out)' # the one used to create the VM
+        override.ssh.password = 'VM User Password (To Fill out)' # the one used to create the VM
         azure.mgmt_certificate = 'Path PEM Certificate from step 2.2 (To Fill out)'
         azure.mgmt_endpoint = 'https://management.core.windows.net'
         azure.subscription_id = 'Azure Subscription Id (To Fill out)'
@@ -22,8 +25,12 @@ Vagrant.configure('2') do |config|
       azure.tcp_endpoints = '3389:53389' # opens the Remote Desktop internal port that listens on public port 53389. Without this, you cannot RDP to a Windows VM.
     end
 
-    config.ssh.username = 'VM User (To Fill out)' # the one used to create the VM
-    config.ssh.password = 'VM User Password (To Fill out)' # the one used to create the VM
+    config.vm.provider "virtualbox" do |v, override|
+       override.vm.box = 'hashicorp/precise64'
+    end
+
+    config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
+    config.vm.provision "shell", path: "provisionuser.sh"
     config.vm.provision "file", source: "./configs/server_token.txt", destination: "/home/azureuser/.klei/DoNotStarveTogether/server_token.txt"
     config.vm.provision "file", source: "./configs/settings.ini", destination: "/home/azureuser/.klei/DoNotStarveTogether/settings.ini"
     config.vm.provision "shell", path: "script.sh"
