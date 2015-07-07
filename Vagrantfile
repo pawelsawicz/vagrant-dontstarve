@@ -26,7 +26,9 @@ Vagrant.configure('2') do |config|
     end
 
     config.vm.provider "virtualbox" do |v, override|
-       override.vm.box = 'hashicorp/precise64'
+       override.vm.box = 'https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box'
+       v.memory = 1024
+       override.vm.network "forwarded_port", guest: 10999, host: 10999, protocol: 'udp'
     end
 
     config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
