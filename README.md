@@ -1,5 +1,7 @@
 # vagrant-dontstarve
 
+[![Join the chat at https://gitter.im/pawelsawicz/vagrant-dontstarve](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pawelsawicz/vagrant-dontstarve?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## What it is ?
 This is basic vagrant file with shell provisioning that allows everyone quickly spin up your own machine on Azure with [Don't Starve Together](http://www.dontstarvegame.com/) Server.
 
