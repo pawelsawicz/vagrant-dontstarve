@@ -11,10 +11,16 @@ This is basic vagrant file with shell provisioning that allows everyone quickly 
 
 ## Virtualbox (localy) 
 
+### Prerequisites
+1. Installed [VirtualBox](https://www.virtualbox.org/)
+2. Installed [Vagrant](https://www.vagrantup.com)
+
 ### Getting started
 1. Simply ```git clone git@github.com:pawelsawicz/vagrant-dontstarve.git``` or [download a zip](https://github.com/pawelsawicz/vagrant-dontstarve/archive/master.zip)
-2. Copy your server_token.txt file into ```./configs```  in your vagrant-dontstarve folder http://dont-starve-game.wikia.com/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers#Server_Tokens
-3. ```vagrant up```
+2. Copy your [server_token.txt](http://dont-starve-game.wikia.com/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers#Server_Tokens) file into ```./configs```  in your vagrant-dontstarve folder 
+4. Customize ```./configs/settings.ini``` file (optional)
+5. cmd to location of vagrantfile and ```vagrant up --provider=virtualbox```
+6. DONE happy playing
 
 ## Microsoft Azure (cloud provider)
 
@@ -25,7 +31,7 @@ This is basic vagrant file with shell provisioning that allows everyone quickly 
 ### Getting started
 
 1. Simply ```git clone git@github.com:pawelsawicz/vagrant-dontstarve.git``` or [download a zip](https://github.com/pawelsawicz/vagrant-dontstarve/archive/master.zip)
-2. Copy your server_token.txt file into ```./configs```  in your vagrant-dontstarve folder http://dont-starve-game.wikia.com/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers#Server_Tokens
+2. Copy your [server_token.txt](http://dont-starve-game.wikia.com/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers#Server_Tokens) file into ```./configs```  in your vagrant-dontstarve folder
 3. Customize ```./configs/settings.ini``` file (optional)
 4. Open Vagrantfile and change fallowing paramaters. For certification see this section
 5. Once you provide all required filed simply ```vagrant up```
