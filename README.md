@@ -1,11 +1,22 @@
 # vagrant-dontstarve
+
 ## What it is ?
 This is basic vagrant file with shell provisioning that allows everyone quickly spin up your own machine on Azure with [Don't Starve Together](http://www.dontstarvegame.com/) Server.
 
 ###Available providers 
 1. Azure - done
+2. Virtualbox - done 
 
-##Basics 
+# Basics 
+
+## Virtualbox (localy) 
+
+### Getting started
+1. Simply ```git clone git@github.com:pawelsawicz/vagrant-dontstarve.git``` or [download a zip](https://github.com/pawelsawicz/vagrant-dontstarve/archive/master.zip)
+2. Copy your server_token.txt file into ```./configs```  in your vagrant-dontstarve folder http://dont-starve-game.wikia.com/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers#Server_Tokens
+3. ```vagrant up```
+
+## Microsoft Azure (cloud provider)
 
 ### Prerequisites
 1. Azure [account](https://account.windowsazure.com)
