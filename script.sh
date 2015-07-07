@@ -23,17 +23,17 @@ echo "Packages have been installed"
 echo "Configurating user"
 #sudo useradd -m steam
 #sudo chmod a+rw `tty`
-sudo su - azureuser
-sudo mkdir /home/azureuser/steamcmd
-cd /home/azureuser/steamcmd
+sudo su - steam
+sudo mkdir /home/steam/steamcmd
+cd /home/steam/steamcmd
 echo "Downloading steam"
 wget http://media.steampowered.com/installer/steamcmd_linux.tar.gz
 echo "Extracting steam"
 tar -xvzf steamcmd_linux.tar.gz
 echo "Install & configure steam"
-./steamcmd.sh steamcmd +login anonymous +force_install_dir /home/azureuser/steamapps/DST +app_update 343050 +validate +quit
+./steamcmd.sh steamcmd +login anonymous +force_install_dir /home/steam/steamapps/DST +app_update 343050 +validate +quit
 echo "Quit from steam console"
 echo "Check out folder to server"
-cd /home/azureuser/steamapps/DST/bin/
+cd /home/steam/steamapps/DST/bin/
 echo "Runs DST Server"
-su -c ./dontstarve_dedicated_server_nullrenderer -s /bin/sh azureuser
+su -c ./dontstarve_dedicated_server_nullrenderer -s /bin/sh steam

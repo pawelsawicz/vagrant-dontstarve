@@ -1,11 +1,28 @@
 # vagrant-dontstarve
+
 ## What it is ?
 This is basic vagrant file with shell provisioning that allows everyone quickly spin up your own machine on Azure with [Don't Starve Together](http://www.dontstarvegame.com/) Server.
 
 ###Available providers 
 1. Azure - done
+2. Virtualbox - done 
 
-##Basics 
+# Basics 
+
+## Virtualbox (localy) 
+
+### Prerequisites
+1. Installed [VirtualBox](https://www.virtualbox.org/)
+2. Installed [Vagrant](https://www.vagrantup.com)
+
+### Getting started
+1. Simply ```git clone git@github.com:pawelsawicz/vagrant-dontstarve.git``` or [download a zip](https://github.com/pawelsawicz/vagrant-dontstarve/archive/master.zip)
+2. Copy your [server_token.txt](http://dont-starve-game.wikia.com/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers#Server_Tokens) file into ```./configs```  in your vagrant-dontstarve folder 
+4. Customize ```./configs/settings.ini``` file (optional)
+5. cmd to location of vagrantfile and ```vagrant up --provider=virtualbox```
+6. DONE happy playing
+
+## Microsoft Azure (cloud provider)
 
 ### Prerequisites
 1. Azure [account](https://account.windowsazure.com)
@@ -14,7 +31,7 @@ This is basic vagrant file with shell provisioning that allows everyone quickly 
 ### Getting started
 
 1. Simply ```git clone git@github.com:pawelsawicz/vagrant-dontstarve.git``` or [download a zip](https://github.com/pawelsawicz/vagrant-dontstarve/archive/master.zip)
-2. Copy your server_token.txt file into ```./configs```  in your vagrant-dontstarve folder http://dont-starve-game.wikia.com/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers#Server_Tokens
+2. Copy your [server_token.txt](http://dont-starve-game.wikia.com/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers#Server_Tokens) file into ```./configs```  in your vagrant-dontstarve folder
 3. Customize ```./configs/settings.ini``` file (optional)
 4. Open Vagrantfile and change all paramaters where is "(To Fill out)" phrase. For certification see this [section](https://github.com/pawelsawicz/vagrant-dontstarve#certification-how-to-generate-)
 5. Once you provide all required filed simply ```vagrant up``` 
