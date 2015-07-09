@@ -63,8 +63,7 @@ If you generated those two certificates, now you have to export them to your dis
 3. Go to azure developer portal and select -> Settings-> Managment Certifcate -> Upload certificate -> select file from point 2.3 
 
 ##Other Info
-###Routmap
 
-1. Add VirtualBox provider
-2. Add AWS provider
-3. Add UDP ports for Azure
+###Routmap
+1. Add AWS provider
+2. Add UDP ports for Azure
