@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Vagrant-dontstarve by pawelsawicz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Vagrant-dontstarve</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/pawelsawicz/vagrant-dontstarve" class="btn">View on GitHub</a>
+      <a href="https://github.com/pawelsawicz/vagrant-dontstarve/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/pawelsawicz/vagrant-dontstarve/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="vagrant-dontstarve" class="anchor" href="#vagrant-dontstarve" aria-hidden="true"><span class="octicon octicon-link"></span></a>vagrant-dontstarve</h1>
+
+<p><a href="https://gitter.im/pawelsawicz/vagrant-dontstarve?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/pawelsawicz/vagrant-dontstarve"></a></p>
+
+<h2>
+<a id="what-it-is-" class="anchor" href="#what-it-is-" aria-hidden="true"><span class="octicon octicon-link"></span></a>What it is ?</h2>
+
+<p>This is basic vagrant file with shell provisioning that allows everyone quickly spin up your own machine on Azure with <a href="http://www.dontstarvegame.com/">Don't Starve Together</a> Server.</p>
+
+<h3>
+<a id="available-providers" class="anchor" href="#available-providers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Available providers</h3>
+
+<ol>
+<li>Azure - done</li>
+<li>Virtualbox - done </li>
+</ol>
+
+<h1>
+<a id="basics" class="anchor" href="#basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basics</h1>
+
+<h2>
+<a id="virtualbox-localy" class="anchor" href="#virtualbox-localy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Virtualbox (localy)</h2>
+
+<h3>
+<a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites</h3>
+
+<ol>
+<li>Installed <a href="https://www.virtualbox.org/">VirtualBox</a>
+</li>
+<li>Installed <a href="https://www.vagrantup.com">Vagrant</a>
+</li>
+</ol>
+
+<h3>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting started</h3>
+
+<ol>
+<li>Simply <code>git clone git@github.com:pawelsawicz/vagrant-dontstarve.git</code> or <a href="https://github.com/pawelsawicz/vagrant-dontstarve/archive/master.zip">download a zip</a>
+</li>
+<li>Copy your <a href="http://dont-starve-game.wikia.com/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers#Server_Tokens">server_token.txt</a> file into <code>./configs</code>  in your vagrant-dontstarve folder </li>
+<li>Customize <code>./configs/settings.ini</code> file (optional)</li>
+<li>cmd to location of vagrantfile and <code>vagrant up --provider=virtualbox</code>
+</li>
+<li>DONE happy playing</li>
+</ol>
+
+<h2>
+<a id="microsoft-azure-cloud-provider" class="anchor" href="#microsoft-azure-cloud-provider" aria-hidden="true"><span class="octicon octicon-link"></span></a>Microsoft Azure (cloud provider)</h2>
+
+<h3>
+<a id="prerequisites-1" class="anchor" href="#prerequisites-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites</h3>
+
+<ol>
+<li>Azure <a href="https://account.windowsazure.com">account</a>
+</li>
+<li>Installed <a href="https://www.vagrantup.com">Vagrant</a>
+</li>
+</ol>
+
+<h3>
+<a id="getting-started-1" class="anchor" href="#getting-started-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting started</h3>
+
+<ol>
+<li>Simply <code>git clone git@github.com:pawelsawicz/vagrant-dontstarve.git</code> or <a href="https://github.com/pawelsawicz/vagrant-dontstarve/archive/master.zip">download a zip</a>
+</li>
+<li>Copy your <a href="http://dont-starve-game.wikia.com/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers#Server_Tokens">server_token.txt</a> file into <code>./configs</code>  in your vagrant-dontstarve folder</li>
+<li>Customize <code>./configs/settings.ini</code> file (optional)</li>
+<li>Open Vagrantfile and change all paramaters where is "(To Fill out)" phrase. For certification see this <a href="https://github.com/pawelsawicz/vagrant-dontstarve#certification-how-to-generate-">section</a>
+</li>
+<li>Once you provide all required filed simply <code>vagrant up</code> </li>
+<li>Enjoy!</li>
+</ol>
+
+<h3>
+<a id="certification-how-to-generate-" class="anchor" href="#certification-how-to-generate-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Certification, how to generate ?</h3>
+
+<p><a href="https://github.com/MSOpenTech/vagrant-azure#certificate-generation">Certification</a> is copied from <a href="https://github.com/MSOpenTech/vagrant-azure">vagrant-azure</a> repository.</p>
+
+<p>We will use <code>makecert.exe</code> distributed as part of the in the Windows 7 SDK. The following commands will create the required certificates and insert them into the current user’s personal store.</p>
+
+<ul>
+<li><p><code>makecert.exe -r -pe -a sha1 -n "CN=My Azure Management Certificate" -ss My -sr CurrentUser -len 2048 -sky exchange -sp "Microsoft Enhanced RSA and AES Cryptographic Provider" -sy 24</code></p></li>
+<li><p><code>makecert.exe -r -pe -a sha1 -n "CN=My Azure SSL Certificate" -ss My -sr CurrentUser -len 2048 -sky exchange -sp "Microsoft Enhanced RSA and AES Cryptographic Provider" -sy 24</code></p></li>
+</ul>
+
+<p>If you generated those two certificates, now you have to export them to your disk and import into Azure Portal.</p>
+
+<ol>
+<li><p>Open <code>certmgr.msc</code> from command line or Windows + F and search for <code>certmgr.msc</code></p></li>
+<li>
+<p>If you have certmgr opened, navigate into Personal-&gt;Certificates-&gt;My Azure Management Certificate and right click All Task-&gt;Export</p>
+
+<ol>
+<li><p>Then Select "Yes, export the private key" -&gt; Select Personal Information Exchange (.PFX), Uncheck "Include all certification path if possible" -&gt; Select Password, and type password -&gt; Type file name and select location of your certificate</p></li>
+<li><p>Open command line navigate to the folder where you saved your .pfx file and run following command <code>openssl pkcs12 -in vagrant.pfx -out c.pem -nodes</code> <a href="https://github.com/MSOpenTech/vagrant-azure/issues/25#issue-38745468">source</a> you can change name vagrant.pfx into something that fits you.</p></li>
+<li><p>Go back to Personal Certificates-&gt;Select My Azure Management Certificate-&gt;Export-&gt; Then Select "No, do not export the private key" -&gt; Select DER encoded binary X.509 (.CER) -&gt; Type file name and select location of your certificate</p></li>
+</ol>
+</li>
+<li><p>Go to azure developer portal and select -&gt; Settings-&gt; Managment Certifcate -&gt; Upload certificate -&gt; select file from point 2.3 </p></li>
+</ol>
+
+<h2>
+<a id="other-info" class="anchor" href="#other-info" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other Info</h2>
+
+<h3>
+<a id="routmap" class="anchor" href="#routmap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Routmap</h3>
+
+<ol>
+<li>Add AWS provider</li>
+<li>Add UDP ports for Azure</li>
+</ol>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/pawelsawicz/vagrant-dontstarve">Vagrant-dontstarve</a> is maintained by <a href="https://github.com/pawelsawicz">pawelsawicz</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
